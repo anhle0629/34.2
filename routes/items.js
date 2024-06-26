@@ -44,7 +44,7 @@ router.patch("/:name", (request, reponse)=>{
     response.json({item: foundItem})
 })
 
-router.patch("/:name", (request, reponse)=>{
+router.delete("/:name", (request, reponse)=>{
     const foundItem = items.find((item)=>{item.name === request.param.name})
     if(foundItem === -1){
         throw new ExpressError("Item not found", 404)
