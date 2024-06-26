@@ -54,3 +54,10 @@ router.delete("/:name", (request, reponse)=>{
 })
 
 module.exports = router;
+
+
+
+//suggestions
+//1. request.param.name should be request.params.name in several places.
+//2. items.find() should return the found item itself, but in the delete route, you're treating it as an index.
+//3.In the delete route, use index to find the item to delete.
